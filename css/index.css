@@ -142,14 +142,14 @@
 }
 
 #quote-button {
-  height: 50px;
+  height: 60px;
   width: 210px;
   background-color: #722d91;
   color: white;
-  font-size: 34px;
+  font-size: 28px;
   font-weight: bold;
   margin-top: 40px;
-  border-radius: 25px;
+  border-radius: 30px;
   cursor: pointer;
 }
 
