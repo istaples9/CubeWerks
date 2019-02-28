@@ -8,13 +8,16 @@
     <link href="https://fonts.googleapis.com/css?family=Yantramanav:500,900" rel="stylesheet">
 </head>
   <body>
-    <header class="header">
-      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/CW-Banner-01.jpg" id="header-img">
-      <div id="nav-menu">
+    <header id="header" >
+      <div id="header-img-div" class="header-content">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/CW-Banner-01.jpg" id="header-img_1">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/CW%20logo%2001.jpg" id="header-img_2">
+      </div>
+      <div id="nav-menu" class="header-content">
         <a href="#footer" id="contact" class="nav-text">CONTACT</a>
       </div>
     </header>
-    <div class="container"> 
+    <div id="container" class="site-content"> 
         <div id="left-box" class="boxes">
           <div id="left-title" class="title-text">The prototype workshop.</div>
           <div id="left-tag" class="tag-text">Bring your poduct to life.</div>
@@ -31,6 +34,7 @@
           </div>
             <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/cubewerks%20design%20page%20renders-02.jpg" id="mid-img" class="box-img">
         </div>
+        <div id="box-spacer_1" class="boxes"></div>
         <div id="right-box" class="boxes">
           <div id="right-header" class="box-header">
             <div id="right-title" class="title-text">MAKE</div>
@@ -42,25 +46,28 @@
           </div>
             <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/cubewerks%20make%20page%20stocks-02.jpg" id="right-img" class="box-img">
         </div>
+        <div id="box-spacer_2" class="boxes"></div>
       </div>
-      <div id="footer" class="footer">
-        <div id="map" class="info">
-          <i style="font-size:24px" class="fa" name="map_icon">&#xf041;</i>
-          <label for="map_icon" class="tag-text">260 Clinton Street, Springfield, VT</label>
+      <div id="footer" class="site-content">
+        <div id="info-container">
+          <div id="map" class="info">
+            <i style="font-size:24px" class="fa" name="map-icon">&#xf041;</i>
+            <label for="map_icon" class="footer-text">260 Clinton Street, Springfield, VT</label>
+          </div>
+          <div id="email" class="info">
+            <i style="font-size:24px" class="fa" name="email-icon">&#xf0e0;</i>
+            <label for="email-icon" class="footer-text">support@cubewerks.com</label>
+          </div>
+          <div id="phone" class="info">
+            <i style="font-size:24px" class="fa" name="phone-icon">&#xf095;</i>
+            <label for="phone-icon" class="footer-text">207-716-6829</label>
+          </div>
+          <!--<div id="share" class="info">
+            //<i style="font-size:24px" class="fa" name="twitter">&#xf099;</i>
+            <i style="font-size:24px" class="fa" name="facebook">&#xf09a;</i>
+            <a href="https://www.youtube.com/channel/UCDgBspNP9-4EC10cl_LmwYg?view_as=subscriber"><i style="font-size:24px" class="fa" name="youtube">&#xf16a;</i></a>
+          </div>-->
         </div>
-        <div id="email" class="info">
-          <i style="font-size:24px" class="fa" name="email-icon">&#xf0e0;</i>
-          <label for="email-icon" class="tag-text">support@cubewerks.com</label>
-        </div>
-        <div id="phone" class="info">
-          <i style="font-size:24px" class="fa" name="phone-icon">&#xf095;</i>
-          <label for="phone-icon" class="tag-text">207-716-6829</label>
-        </div>
-        <!--<div id="share" class="info">
-          //<i style="font-size:24px" class="fa" name="twitter">&#xf099;</i>
-          <i style="font-size:24px" class="fa" name="facebook">&#xf09a;</i>
-          <a href="https://www.youtube.com/channel/UCDgBspNP9-4EC10cl_LmwYg?view_as=subscriber"><i style="font-size:24px" class="fa" name="youtube">&#xf16a;</i></a>
-        </div>-->
       </div>
   </body>
 </html>
