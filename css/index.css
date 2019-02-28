@@ -1,31 +1,44 @@
-html, body {
+ body {
   background-color: #212224;
   display: flex;
   flex-direction: column;
   font-family: 'Yantramanav', sans-serif;
   margin: 0;
+  min-height: 100vh;
 }
 
-header {
+.site-content {
+  flex: 1;
+}
+
+#header {
   display: flex;
   flex-direction: row;
-  height: 80px;
-  width: 100%;
+  height: 90px;
   background-color: white;
-  overflow: hidden;
 }
 
-#header-img {
+#header-img-div {
+  width: 90%;
+
+  background-color: white;
+}
+
+#header-img_1 {
+  display: flex;
   height: 100%;
 }
 
+#header-img_2 {
+  display: none;
+}
+
 #nav-menu {
+  display: flex;
   background-color: white;
-  text-align: right;
-  margin: 0;
-  padding-right: 15px;
-  padding-top: 50px;
-  width: 100%;
+  width: 10%;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-text {
@@ -35,18 +48,18 @@ header {
   font-weight: bold;
 }
 
-.container {
+#container {
   display: flex;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  align-items: center;
+  margin-top: 14px;
+  margin-bottom: 14px;
 }
-
 
 .boxes {
   display: flex;
   flex-direction: column;
-  margin-right: 10px;
   flex: 1;
+  flex-grow: 2;
   text-align: center;
 }
 
@@ -54,9 +67,8 @@ header {
   display: flex;
   flex-direction: column;
   background-color: grey;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  height: 55px;
+  justify-content: center;
+  height: 70px;
 }
 
 .box-tag {
@@ -99,6 +111,8 @@ header {
   background-color: #212224;
   align-items: center;
   justify-content: center;
+  margin: 20px;
+  flex: 1.25;
 }
 
 
@@ -106,8 +120,9 @@ header {
   display:flex;
   flex-direction:row;
   justify-content: center;
-  font-size: 38px;
+  font-size: 50px;
   font-weight: 900;
+  line-height: 80%;
 }
 
 #left-tag {
@@ -115,32 +130,43 @@ header {
   flex-direction:row;
   justify-content: space-evenly;
   text-transform: none !important;
-  font-size: 23px;
+  font-size: 20px;
+  padding-top: 5px;
+}
+
+#box-spacer_1 {
+  flex: .05;
+}
+
+#box-spacer_2 {
+  flex: .05;
 }
 
 #quote-button {
   height: 50px;
-  width: 220px;
+  width: 210px;
   background-color: #722d91;
   color: white;
   font-size: 34px;
   font-weight: bold;
-  margin-top: 20px;
+  margin-top: 40px;
   border-radius: 25px;
   cursor: pointer;
 }
 
-
-
-.footer {
+#footer {
    display: flex;
-   bottom: 0px;
    width: 100%;
-   height: 150px;
-   font-size: 20px;
    background-color: #141415;
-   justify-content: space-evenly;
+   justify-content: center;
    align-items: center;
+   height: 180px;
+}
+
+#info-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 .info {
@@ -151,8 +177,14 @@ header {
 
 .fa {
   color: white;
-  font-size: 25px !important;
+  font-size: 30px !important;
   margin: 3px;
+}
+
+.footer-text {
+  font-size: 16px;
+  color: white;
+  text-transform: uppercase;
 }
 
 #share {
@@ -164,10 +196,33 @@ header {
 
 @media only screen and (max-width: 1070px) {
   
-  .container {
+  body {
+    zoom: 2;
+  }
+  
+  #header {
     display: flex;
+    justify-content: center;
+  }
+  
+  #header-img-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #header-img_1 {
+    display: none;
+  }
+  
+   #header-img_2 {
+    display: flex;
+     width: 100%;
+  }
+  
+  #container {
     flex-direction: column;
-    height: 100%;
+    margin: 0;
   }
   
   #nav-menu {
@@ -175,7 +230,7 @@ header {
   }
   
   .boxes {
-    padding-top: 10px;
+    padding-bottom: 10px;
     margin: 0;
   }
   
@@ -184,18 +239,26 @@ header {
   }
   
   #left-box {
-    height: 50%;
+    height: 55%;
     padding-bottom: 20px;
   }
   
-  .footer {
+  #footer {
     flex-direction: column;
+    height: 280px;
+  }
+  
+  #info-container {
+    flex-direction: column;
+    justify-content: space-between;
     height: 100%;
+    margin: 30px;
   }
   
   .info {
-    padding: 10px;
+    zoom: .8;
   }
   
 }
+
 
