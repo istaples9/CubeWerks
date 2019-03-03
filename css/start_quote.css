@@ -15,7 +15,7 @@ header {
 }
 
 #header-img {
-  height: 70%;
+  height: 70px;
 }
 
 .container {
@@ -23,7 +23,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 50px;
+  padding-top: 60px;
   width: 100%;
 }
 
@@ -195,15 +195,15 @@ label {
   }
   
   .container {
-    padding-top: 140px;
+    padding-top: 120px;
   }
   
   .steps {
     flex-direction: column;
   }
   
-  .boxes {
-    margin-bottom: 80px;
+  .box-text {
+    padding: 20px;
   }
   
   form {
