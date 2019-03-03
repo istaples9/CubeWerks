@@ -1,4 +1,4 @@
- body {
+  body {
   background-color: #212224;
   display: flex;
   flex-direction: column;
@@ -204,7 +204,7 @@
     justify-content: center;
   }
   
-  #header-img-div{
+  #header-img-div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -225,6 +225,7 @@
   
   #container {
     flex-direction: column;
+    margin: 0px;
   }
   
   #nav-menu {
