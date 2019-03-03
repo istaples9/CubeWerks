@@ -195,11 +195,15 @@ label {
   }
   
   .container {
-    padding-top: 120px;
+    padding-top: 160px;
   }
   
   .steps {
     flex-direction: column;
+  }
+  
+  .boxes {
+    padding-bottom: 40px;
   }
   
   .box-text {
@@ -217,5 +221,6 @@ label {
     padding: 10px;
   }
 }
+
 
 
