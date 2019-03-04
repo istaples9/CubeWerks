@@ -195,7 +195,7 @@ label {
   }
   
   .container {
-    padding-top: 160px;
+    padding-top: 180px;
   }
   
   .steps {
@@ -203,7 +203,7 @@ label {
   }
   
   .boxes {
-    padding-bottom: 60px;
+    padding-bottom: 80px;
   }
   
   .box-text {
@@ -221,4 +221,5 @@ label {
     padding: 10px;
   }
 }
+
 
