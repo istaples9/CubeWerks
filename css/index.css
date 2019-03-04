@@ -161,7 +161,8 @@ body {
    background-color: #141415;
    justify-content: center;
    align-items: center;
-   height: 160px;
+   text-align: center;
+   height: 180px;
 }
 
 #info-container {
@@ -173,17 +174,18 @@ body {
 .info {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
 .fa {
   color: white;
-  font-size: 21px !important;
-  margin: 3px;
+  font-size: 24px !important;
+  margin: 8px;
 }
 
 .footer-text {
-  font-size: 12px;
+  font-size: 13px;
   color: white;
   text-transform: uppercase;
 }
@@ -191,8 +193,6 @@ body {
 #share {
   display: flex;
   flex-direction: row;
-  width: 10%;
-  justify-content: space-evenly;
 }
 
 @media only screen and (max-width: 1025px) {
@@ -250,7 +250,7 @@ body {
   
   #footer {
     flex-direction: column;
-    height: 280px;
+    height: 400px;
   }
   
   #info-container {
