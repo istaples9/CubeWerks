@@ -191,11 +191,11 @@ label {
 @media only screen and (max-width: 1070px) {
   
   header {
-    
+    zoom: 2;
   }
   
   .container {
-    padding-top: 120px;
+    padding-top: 160px;
   }
   
   .steps {
@@ -221,5 +221,4 @@ label {
     padding: 10px;
   }
 }
-
 
