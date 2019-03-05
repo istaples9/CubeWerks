@@ -1,4 +1,5 @@
 
+
 // Initialize Firebase
   var config = {
     apiKey: "AIzaSyAZTlNJt5o0RZ9KhQQgcZphgCLfBz1P4w0",
@@ -107,7 +108,7 @@ function saveMessage(newMessageRef, download_urls){
   var tech_drawing = getCheckedVal('f-drawing')
   var cnc = getCheckedVal('f-cnc')
   var additive_printing = getCheckedVal('f-3dp')
-  var digital_printing = getCheckedVal('f-printing')
+  var laser_cutting = getCheckedVal('f-laser')
   var details = getInputVal('f-details')
   
   newMessageRef.set({
@@ -121,14 +122,13 @@ function saveMessage(newMessageRef, download_urls){
     technical_drawing: tech_drawing,
     CNC: cnc,
     additive_printing: additive_printing,
-    digital_printing: digital_printing,
+    laser_cutting: laser_cutting,
     message: details,
     url: download_urls
   })
 
   console.log('submitted');
 }
-
 
 
 
