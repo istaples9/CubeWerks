@@ -20,7 +20,7 @@
 
 #header-img-div {
   display: flex;
-  width: 82%;
+  width: 80%;
   background-color: white;
   object-fit: contain;
 }
@@ -37,9 +37,10 @@
 #nav-menu {
   display: flex;
   background-color: white;
-  width: 18%;
-  justify-content: space-evenly;
+  width: 20%;
+  justify-content: space-between;
   align-items: center;
+  padding-right: 30px;
 }
 
 .nav-text {
@@ -109,13 +110,12 @@
 }
 
 #left-box {
-  background-color: #212224;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  margin: 16px;
+  justify-content: space-around;
+  align-self: stretch;
   flex: 1.5;
 }
-
 
 #left-title {
   display:flex;
@@ -126,13 +126,24 @@
   line-height: 80%;
 }
 
-#left-tag {
-  display:flex;
-  flex-direction:row;
-  justify-content: space-evenly;
-  text-transform: none !important;
-  font-size: 18px;
-  padding-top: 5px;
+.left-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+.left-text {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  width: 150px;
+}
+
+#up-arrow, #down-arrow {
+  font-size: 48px !important;
+  color: grey !important;
 }
 
 #box-spacer_1 {
@@ -143,14 +154,14 @@
   flex: .0675;
 }
 
-#quote-button {
+.left_button {
   height: 48px;
-  width: 180px;
+  width: 150px;
   background-color: #722d91;
   color: white;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
-  margin-top: 40px;
+  margin: 10px;
   border-radius: 30px;
   cursor: pointer;
 }
