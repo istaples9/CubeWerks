@@ -255,8 +255,7 @@
   }
   
   #left-box {
-    padding: 35px;
-    width: 280px;
+    margin: 35px;
   }
   
   #footer {
@@ -272,3 +271,4 @@
   }
   
 }
+
