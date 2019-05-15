@@ -112,7 +112,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  flex: 2.25;
+  flex: 1.9;
 }
 
 #left-title {
@@ -142,6 +142,7 @@
 #up-arrow, #down-arrow {
   font-size: 48px !important;
   color: grey !important;
+  padding: 20px;
 }
 
 #box-spacer_1 {
