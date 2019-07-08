@@ -98,7 +98,7 @@ header {
 
 #cad {
   background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/iStock-CAD-02.jpg);
-  background-size: cover;
+  background-size: 150%;
 }
 
 #render {
