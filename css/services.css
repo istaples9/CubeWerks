@@ -1,0 +1,227 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Yantramanav', sans-serif;
+  margin: 0;
+  background-color: #2e2e2e;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  height: 70px;
+  background-color: white;
+  align-items: flex-start;
+  width: 100%;
+}
+
+#header-img-div {
+  height: 100%;
+  background-color: white;
+}
+
+#header-img_1 {
+  height: 100%;
+  object-fit: contain;
+}
+
+#header-img_2 {
+  display: none;
+}
+
+#nav-menu {
+  display: flex;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 30px;
+}
+
+.nav-text {
+  font-size: 15px;
+  color: #767676;
+  text-decoration: none;
+  font-weight: bold;
+  padding-left: 75px;
+}
+
+.container {
+  width: 70%;
+  margin: 10px;
+}
+
+.containers{
+  display: flex;
+  flex-direction: row;
+}
+
+.boxes {
+  display: flex;
+  flex-direction: column;
+  background-color: #767676;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  margin: 10px;
+  height: 400px;
+  width: 50%;
+}
+
+.box-title {
+  color: white;
+  padding: 20px;
+  font-size: 52px;
+  font-weight: 900;
+  line-height: 80%;
+}
+
+.text-box {
+  display: none;
+}
+
+.box-tag {
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 80%;
+  text-transform: uppercase;
+}
+
+.tag-text {
+  font-size: 18px !important;
+  font-weight: 50;
+  line-height: 150%;
+  padding-top: 40px;
+}
+
+#cad {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/iStock-CAD-02.jpg);
+  background-size: cover;
+}
+
+#render {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/iStock-render-02.jpg);
+  background-size: cover;
+}
+
+#print {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/iStock-Resin%20Chess%20Piece-01.jpg);
+  background-size: cover;
+}
+
+.boxes:hover .box-title{
+  display: none;
+}
+
+.boxes:hover .text-box{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 80%;
+}
+
+#cad:hover {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/iStock-CAD-02-DARK.jpg);
+}
+
+#render:hover {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/iStock-render-02-DARK.jpg);
+}
+
+#print:hover {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/iStock-Resin%20Chess%20Piece-01-DARK.jpg);
+}
+
+#footer {
+   display: flex;
+   width: 100%;
+   background-color: #141415;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   height: 180px;
+}
+
+#info-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa {
+  color: white;
+  font-size: 24px !important;
+  margin: 8px;
+}
+
+.footer-text {
+  font-size: 13px;
+  color: white;
+  text-transform: uppercase;
+}
+
+#share {
+  display: flex;
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 1150px) {
+  
+  header {
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+  
+  #header-img-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  #header-img_1 {
+    display: none;
+  }
+  
+   #header-img_2 {
+    display: flex;
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 12.5px;
+  }
+  
+  #nav-menu {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin-bottom: 10px;
+    padding: 0px;
+  }
+  
+  .nav-text {
+    padding: 0px;
+  }
+  
+  .container {
+    margin-top: 10px;
+  }
+  
+  .containers {
+    flex-direction: column;
+  }
+  
+  .boxes {
+    width: 97.5%;
+  }
+  
+}
