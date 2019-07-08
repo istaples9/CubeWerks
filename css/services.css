@@ -108,7 +108,7 @@ header {
 
 #print {
   background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/iStock-Resin%20Chess%20Piece-01.jpg);
-  background-size: cover;
+  background-size: 150%;
 }
 
 .boxes:hover .box-title{
