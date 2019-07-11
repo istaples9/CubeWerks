@@ -146,11 +146,6 @@ header {
   font-size: 1.25vw;
 }
 
-.fa {
-  color: grey !important;
-  padding: 1vw;
-}
-
 #up-arrow, #down-arrow, #left-arrow, #right-arrow {
   font-size: 3.5vw !important;
 }
@@ -279,7 +274,6 @@ header {
     width: 75%;
   }
   
-  
   .boxes {
     padding-bottom: 10px;
     margin: 0;
@@ -287,9 +281,14 @@ header {
   
   #left-text-box {
     flex-direction: row;
-    margin-top: 35px;
-    margin-bottom: 35px;
+    align-items: flex-end;
     zoom: 1.35;
+    height: 90px;
+    margin-bottom: 30px;
+  }
+  
+  .title-text {
+    padding-bottom: 10px;
   }
   
   #up-arrow, #down-arrow {
@@ -317,3 +316,5 @@ header {
   }
   
 }
+
+
