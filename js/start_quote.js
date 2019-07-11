@@ -20,10 +20,13 @@ storageService = firebase.storage();
 window.onload=function(){
   
   //function gets triggered any time someone selects a new file via the Choose File upload button
-  document.querySelector('.inputfile').addEventListener('change', handleFileUploadChange);
-  
-  //calls funtion to submit form
+  document.querySelector('.input-file').addEventListener('change', handleFileUploadChange);
+ 
+  //calls function to submit form upon submit trigger
   document.getElementById('contact-form').addEventListener('submit', submitForm);
+  
+  //calls function to count uploaded files upon file change
+  document.querySelector('.input-file').addEventListener('click', fileCount);
 }
 
 //global selectedFile
@@ -63,7 +66,12 @@ async function submitForm() {
   
   var newMessageRef = messagesRef.push();
   var messageID = newMessageRef.key;
-
+  
+  //changes submit button on click
+  const submitBtn = document.getElementById('submit-label')
+  submitBtn.innerHTML = 'Working...';
+  submitBtn.style.backgroundColor = '#E75F41';
+  
   saveMessage(newMessageRef, await handleFileUploadSubmit(messageID));
 
   //hide contact form
@@ -80,6 +88,9 @@ async function submitForm() {
   
   //resets contact form
   document.getElementById('contact-form').reset();
+  
+  //removes submit button styling and number of selected files on form reset
+  document.getElementById('contact-form').addEventListener('reset', styleReset(submitBtn, '', 'Submit'));
 }
 
 //get input vals
@@ -129,14 +140,29 @@ function saveMessage(newMessageRef, download_urls){
 }
 
 
+//resets element color and text
+function styleReset(element, color, text) {
+  //resets fileCount text
+  document.querySelector('.file-info').innerHTML = 0 + ' files selected';
+  
+  element.style.backgroundColor = color;
+  element.innerHTML = text;
+}
 
 
+//updates upload file info with file count
+function fileCount() {
+  const uploadButton = document.querySelector('.input-file');
+  const fileInfo = document.querySelector('.file-info');
+  const realInput = document.getElementById('file-upload');
+  let fileCount = 0;
 
+  uploadButton.addEventListener('click', (e) => {
+    realInput.click();
+  });
 
-
-
-
-
-
-
-
+  realInput.addEventListener('change', () => {
+    fileCount += realInput.files.length;
+    fileInfo.innerHTML = fileCount + ' files selected';
+  });
+}
