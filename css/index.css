@@ -51,6 +51,10 @@ header {
   padding-left: 75px;
 }
 
+.nav-text:hover {
+  color: #E75F41;
+}
+
 #container {
   display: flex;
   align-items: center;
@@ -171,8 +175,11 @@ header {
   font-size: 1.5vw;
   font-weight: bold;
   margin: 10px;
-  border-radius: 30px;
   cursor: pointer;
+}
+
+.left_button:hover {
+  background-color: #E75F41;
 }
 
 #footer {
@@ -213,6 +220,14 @@ header {
 #share {
   display: flex;
   flex-direction: row;
+}
+
+.social:hover {
+    color: #E75F41;
+  }
+
+#share :hover {
+  color: #E75F41 !important;
 }
 
 @media only screen and (max-width: 1150px) {
