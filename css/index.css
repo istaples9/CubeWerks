@@ -1,4 +1,4 @@
-body {
+ body {
   background-color: #2e2e2e;
   display: flex;
   flex-direction: column;
@@ -147,7 +147,8 @@ header {
 }
 
 #up-arrow, #down-arrow, #left-arrow, #right-arrow {
-  font-size: 3.5vw !important;
+  font-size: 3vw !important;
+  color: #767676;
 }
 
 #left-arrow, #right-arrow {
@@ -203,7 +204,7 @@ header {
 .fa {
   color: white;
   font-size: 24px !important;
-  margin: 8px;
+  margin: 20px;
 }
 
 .footer-text {
@@ -316,5 +317,3 @@ header {
   }
   
 }
-
-
