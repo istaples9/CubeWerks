@@ -1,6 +1,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="css/start_quote.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Yantramanav:500,900" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
@@ -16,10 +17,18 @@
     </script>
   </head>
 <body>
-  <header class="header">
-    <a href="index.html">
-    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/CW%20logo%2001.jpg" id="header-img">
-    </a>
+  <header id="header" >
+    <div id="header-img-div" class="header-content">
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/CW-Banner-01.jpg" id="header-img_1">
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/CW%20logo%2001.jpg" id="header-img_2">
+    </div>
+    <div id="nav-menu" class="header-content">
+      <a href="start_quote.html" id="contact" class="nav-text" onclick="window.location.href='start_quote.html'">CREATE</a>
+      <a href="https://cubewerks-shop.com/" id="contact" class="nav-text">SHOP</a>
+      <a href="services.html" id="contact" class="nav-text">SERVICES</a>
+      <a href="index.html" id="contact" class="nav-text">HOME</a>
+      <!--<a href="#footer" id="contact" class="nav-text">CONTACT</a>-->
+    </div>
   </header>
   <div class="container">
     <div class="steps">
@@ -48,77 +57,102 @@
       </div>  
     </div>
     
-    <div class="alert" id="alert-message">Your message has been sent. We will contact you by email shortly.</div>   
-    <form id="contact-form">
-      <div id="name" class="contact-form-top" >
-        <label class="f-title">Name</label>
-        <input type="text" class="f-input" id="f-name" placeholder="Enter name..." required>
-      </div>
-      <div id="email" class="contact-form-top">
-        <label class="f-title">Email</label>
-        <input type="text" class="f-input" id="f-email" placeholder="Enter email..." required>
-      </div>
-      <div id="phone" class="contact-form-top">
-        <label class="f-title">Number</label>
-        <input type="text" class="f-input" id="f-phone" placeholder="Enter phone number...">
-      </div>
-      <div id="company" class="contact-form-top">
-        <label class="f-title">Company</label>
-        <input type="text" class="f-input" id="f-company" placeholder="Enter company name...">
-      </div>
-      <div id="project-name" class="contact-form-top">
-        <label class="f-title">Project Name</label>
-        <input type="text" class="f-input" id="f-project" placeholder="Name your project..." required>
-      </div>
-      <div id="design-services-container" class="contact-form-top">
-        <div class="services-title-container">
-          <label class="f-title">Design Services</label>
+    <div id="form-container"> 
+      <form id="contact-form">
+        <div id="name" class="contact-form-top" >
+          <label class="f-title">Name</label>
+          <input type="text" class="f-input" id="f-name" placeholder="Enter name..." required>
         </div>
-          <div class="checkbox-container">
-            <label class="check_label" for"f-cad">3D Modeling
-              <input type="checkbox" id="f-cad" class="checkbox">
-            </label>
-            <label class="check_label" for"f-rendering">Product Rendering
-              <input type="checkbox" id="f-rendering" class="checkbox">
-            </label>
-            <!--<label class="check_label" for"f-drawing">Technical Drawings
-              <input type="checkbox" id="f-drawing" class="checkbox">
-            </label>-->
+        <div id="email" class="contact-form-top">
+          <label class="f-title">Email</label>
+          <input type="text" class="f-input" id="f-email" placeholder="Enter email..." required>
+        </div>
+        <div id="phone" class="contact-form-top">
+          <label class="f-title">Number</label>
+          <input type="text" class="f-input" id="f-phone" placeholder="Enter phone number...">
+        </div>
+        <div id="company" class="contact-form-top">
+          <label class="f-title">Company</label>
+          <input type="text" class="f-input" id="f-company" placeholder="Enter company name...">
+        </div>
+        <div id="project-name" class="contact-form-top">
+          <label class="f-title">Project Name</label>
+          <input type="text" class="f-input" id="f-project" placeholder="Name your project..." required>
+        </div>
+        <div id="design-services-container" class="contact-form-top">
+          <div class="services-title-container">
+            <label class="f-title">Design Services</label>
           </div>
-      </div>
-      <div id="manufacturing-services-container" class="contact-form-top">
-        <div class="services-title-container">
-          <label class="f-title">Production Services</label>
+            <div class="checkbox-container">
+              <label class="check_label" for"f-cad">3D Modeling
+                <input type="checkbox" id="f-cad" class="checkbox">
+              </label>
+              <label class="check_label" for"f-rendering">3D Rendering
+                <input type="checkbox" id="f-rendering" class="checkbox">
+              </label>
+            </div>
         </div>
-          <div class="checkbox-container">
-            <label class="check_label" for"f-scanning">3D Scanning
-              <input type="checkbox" id="f-scanning" class="checkbox">
-            </label>
-            <label class="check_label" for"f-3dp">3D Printing
-              <input type="checkbox" id="f-3dp" class="checkbox">
-            </label>
-            <!--<label class="check_label" for"f-laser">Laser Cutting
-              <input type="checkbox" id="f-laser" class="checkbox">
-            </label>-->
+        <div id="production-services-container" class="contact-form-top">
+          <div class="services-title-container">
+            <label class="f-title">Production Services</label>
           </div>
-      </div>
-      <div id="details" class="contact-form-top">
-        <textarea id="f-details" class="f-input" placeholder="Tell us about your project.."></textarea>
-      </div>
-      <div id="buttons">
-        <div id="upload" class="contact-form-bot">
-          <input type="file" id="file-upload" class="input-file" multiple>
-            <label for="file-upload" id="upload-label" class="input-btn">Upload files</label>
-          <span class="file-info">0 files selected</span>
+            <div class="checkbox-container">
+              <label class="check_label" for"f-scanning">3D Scanning
+                <input type="checkbox" id="f-scanning" class="checkbox">
+              </label>
+              <label class="check_label" for"f-3dp">3D Printing
+                <input type="checkbox" id="f-3dp" class="checkbox">
+              </label>
+              <!--<label class="check_label" for"f-laser">Laser Cutting
+                <input type="checkbox" id="f-laser" class="checkbox">
+              </label>-->
+            </div>
         </div>
-        <div class="contact-form-bot">
-          <a id="submit-anchor" href="#alert-message">
-            <button id="fsubmit" type="submit" class="input-file"></button>
-              <label for="fsubmit" id="submit-label" class="input-btn">Submit</label>
-          </a>
+        <div id="details" class="contact-form-top">
+          <label class="f-title">Project Details</label>
+          <textarea id="f-details" class="f-input" placeholder="Tell us about your project.."></textarea>
+        </div>
+        <div id="buttons">
+          <div id="upload" class="contact-form-bot">
+            <input type="file" id="file-upload" class="input-file" multiple>
+              <label for="file-upload" id="upload-label" class="input-btn">Upload files</label>
+            <div class="file-info">0 files selected</div>
+          </div>
+          <div class="contact-form-bot">
+            <a id="submit-anchor" href="#alert-message">
+              <button id="fsubmit" type="submit" class="input-file"></button>
+                <label for="fsubmit" id="submit-label" class="input-btn">Submit</label>
+            </a>
+          </div>
+        </div>
+      </form>
+      <div class="alert">
+        <div id="alert-text">Your message has been sent. We will contact you by email shortly.</div>  
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    <div id="info-container">
+      <div id="map" class="info">
+        <i style="font-size:24px" class="fa" name="map-icon">&#xf041;</i>
+        <label for="map_icon" class="footer-text">260 Clinton Street, Springfield, VT</label>
+      </div>
+      <div id="email" class="info">
+        <i style="font-size:24px" class="fa" name="email-icon">&#xf0e0;</i>
+        <label for="email-icon" class="footer-text">support@cubewerks.com</label>
+      </div>
+      <div id="phone" class="info">
+        <i style="font-size:24px" class="fa" name="phone-icon">&#xf095;</i>
+        <label for="phone-icon" class="footer-text">(802) 234-1253</label>
+      </div>
+      <div id="share" class="info">
+        <div class="social-media">
+          <a href="https://twitter.com/CubeWerks"><i style="font-size:24px" class="fa" name="twitter">&#xf099;</i></a>
+          <a href="https://www.facebook.com/ThePrototypeWorkshop/?view_public_for=2664090020284775"><i style="font-size:24px" class="fa" name="facebook">&#xf09a;</i></a>
+          <!--<a href="https://www.youtube.com/channel/UCDgBspNP9-4EC10cl_LmwYg?view_as=subscriber"><i style="font-size:24px" class="fa" name="youtube">&#xf16a;</i></a>-->
         </div>
       </div>
-    </form>
+    </div>
   </div>
 </body>
 </html>
