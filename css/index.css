@@ -213,16 +213,12 @@ header {
   text-transform: uppercase;
 }
 
-#share {
+#social {
   display: flex;
   flex-direction: row;
 }
 
-.social:hover {
-    color: #E75F41;
-  }
-
-#share :hover {
+#social :hover {
   color: #E75F41 !important;
 }
 
@@ -317,3 +313,5 @@ header {
   }
   
 }
+
+
