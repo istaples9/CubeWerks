@@ -25,17 +25,26 @@ window.onload=function(){
   //calls function to submit form upon submit trigger
   document.getElementById('contact-form').addEventListener('submit', submitForm);
   
-  //calls function to count uploaded files upon file change
-  document.querySelector('.input-file').addEventListener('click', fileCount);
 }
 
-//global selectedFile
+//global selectedFile and fileNames
 let selectedFiles = [];
-//tracks uploaded files
+let fileNames = [];
+//tracks uploaded files and displays file names
 function handleFileUploadChange(evt) {
-  console.log('uploaded');
+  const uploadButton = document.querySelector('.input-file');
+  let fileInfo = document.querySelector('.file-info');
+  const realInput = document.getElementById('file-upload');
+  let files = realInput.files
   
-  selectedFiles = evt.target.files;
+  for (var i = 0; i < files.length; i++) {
+    fileNames.push(files[i].name + "<br>");
+    selectedFiles.push(files[i]);
+  }
+  
+  fileInfo.innerHTML = fileNames.join("");
+  
+  console.log('uploaded');
 }
 
 //creates databse reference for uploaded files, generates download urls
@@ -67,18 +76,18 @@ async function submitForm() {
   var newMessageRef = messagesRef.push();
   var messageID = newMessageRef.key;
   
-  //changes submit button on click
+  //changes submit button color and text on form submit
   const submitBtn = document.getElementById('submit-label')
   submitBtn.innerHTML = 'Working...';
   submitBtn.style.backgroundColor = '#E75F41';
   
   saveMessage(newMessageRef, await handleFileUploadSubmit(messageID));
-
-  //hide contact form
-  document.querySelector('#contact-form').style.display = 'none';
   
   //show contact form after 6 seconds
-  setTimeout(function(){ document.querySelector('#contact-form').style.display = 'flex'; }, 6000);
+  setTimeout(function(){ document.querySelector('#form-container').style.display = 'flex'; }, 6000);
+  
+  //reduces form opacity
+  document.querySelector('#contact-form').style.opacity = .2;
   
   //show submit message
   document.querySelector('.alert').style.display = 'flex';
@@ -140,29 +149,21 @@ function saveMessage(newMessageRef, download_urls){
 }
 
 
-//resets element color and text
+//resets element color, text and opacity on form submit
 function styleReset(element, color, text) {
-  //resets fileCount text
-  document.querySelector('.file-info').innerHTML = 0 + ' files selected';
+  //resets fileInfo text
+  document.querySelector('.file-info').innerHTML = '0 files selected';
   
+  //resets opacity after duration
+  setTimeout(function(){ document.querySelector('#contact-form').style.opacity = 1; }, 6000);
+  
+  //resets button color
   element.style.backgroundColor = color;
+  
+  //resets button text
   element.innerHTML = text;
 }
 
 
-//updates upload file info with file count
-function fileCount() {
-  const uploadButton = document.querySelector('.input-file');
-  const fileInfo = document.querySelector('.file-info');
-  const realInput = document.getElementById('file-upload');
-  let fileCount = 0;
 
-  uploadButton.addEventListener('click', (e) => {
-    realInput.click();
-  });
 
-  realInput.addEventListener('change', () => {
-    fileCount += realInput.files.length;
-    fileInfo.innerHTML = fileCount + ' files selected';
-  });
-}
