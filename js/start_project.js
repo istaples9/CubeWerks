@@ -7,14 +7,17 @@
     storageBucket: "cubewerks-ec743.appspot.com",
     messagingSenderId: "89768636380"
   };
-  firebase.initializeApp(config);
 
+
+//calls function to initialize firebase
+firebase.initializeApp(config);
 
 //reference messages collection
 const messagesRef = firebase.database().ref('messages');
 
 //reference firebase storage
 storageService = firebase.storage();
+
 
 //gets form elements after page has loaded
 window.onload=function(){
@@ -23,9 +26,9 @@ window.onload=function(){
   document.querySelector('.input-file').addEventListener('change', handleFileUploadChange);
  
   //calls function to submit form upon submit trigger
-  document.getElementById('contact-form').addEventListener('submit', submitForm);
-  
+  document.getElementById('contact-form').addEventListener('submit', submitForm); 
 }
+
 
 //global selectedFile and fileNames
 let selectedFiles = [];
@@ -46,6 +49,7 @@ function handleFileUploadChange(evt) {
   
   console.log('uploaded');
 }
+
 
 //creates databse reference for uploaded files, generates download urls
 async function handleFileUploadSubmit(messageID) {
@@ -83,18 +87,6 @@ async function submitForm() {
   
   saveMessage(newMessageRef, await handleFileUploadSubmit(messageID));
   
-  //show contact form after 6 seconds
-  setTimeout(function(){ document.querySelector('#form-container').style.display = 'flex'; }, 6000);
-  
-  //reduces form opacity
-  document.querySelector('#contact-form').style.opacity = .2;
-  
-  //show submit message
-  document.querySelector('.alert').style.display = 'flex';
-  
-  //hide submit message after 6 seconds
-  setTimeout(function(){ document.querySelector('.alert').style.display = 'none'; }, 6000);
-  
   //resets contact form
   document.getElementById('contact-form').reset();
   
@@ -102,10 +94,12 @@ async function submitForm() {
   document.getElementById('contact-form').addEventListener('reset', styleReset(submitBtn, '', 'Submit'));
 }
 
+
 //get input vals
 function getInputVal(id){
   return document.getElementById(id).value;
 }
+
 
 //get checkbox vals
 function getCheckedVal(id){
@@ -146,6 +140,24 @@ function saveMessage(newMessageRef, download_urls){
   })
 
   console.log('submitted');
+  alertMsg();
+}
+
+
+//display alert message up form submit
+function alertMsg() {
+  //show contact form after 6 seconds
+  setTimeout(function(){ document.querySelector('#form-container').style.display = 'flex'; }, 6000);
+  
+  //reduces form opacity
+  document.querySelector('#contact-form').style.opacity = .2;
+  
+  //show submit message
+  document.querySelector('.alert').style.display = 'flex';
+  window.location.hash = 'alert-text';
+  
+  //hide submit message after 6 seconds
+  setTimeout(function(){ document.querySelector('.alert').style.display = 'none'; }, 6000);
 }
 
 
@@ -163,7 +175,3 @@ function styleReset(element, color, text) {
   //resets button text
   element.innerHTML = text;
 }
-
-
-
-
