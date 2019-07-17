@@ -224,7 +224,7 @@ header {
   
   #container {
     margin-top: 10px;
-    height: 1500px;
+    height: 1800px;
   }
   
   .img-container {
@@ -235,8 +235,8 @@ header {
     width: 100%;
   }
   
-  .text-box {
-    font-size: 10vw;
+  .box-title, .box-tag, .tag-text {
+    zoom: 1.2;
   }
   
   #footer {
