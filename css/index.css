@@ -1,4 +1,4 @@
- body {
+body {
   display: flex;
   flex-direction: column;
   font-family: 'Yantramanav', sans-serif;
@@ -162,7 +162,7 @@ header {
   display: none;
 }
 
-.left_button {
+.left-button {
   height: 50px;
   width: 190px;
   background-color: #722d91;
@@ -173,7 +173,7 @@ header {
   cursor: pointer;
 }
 
-.left_button:hover {
+.left-button:hover {
   background-color: #E75F41;
 }
 
@@ -268,6 +268,7 @@ header {
   #container {
     flex-direction: column;
     height: 100%;
+    width: 75%;
   }
   
   .boxes {
@@ -277,10 +278,14 @@ header {
   }
   
   #left-text-box {
-    zoom: 1.25;
     flex-direction: row;
     align-items: flex-end;
     margin-bottom: 40px;
+  }
+  
+  .left-title, .left-text, .left-button {
+    width: 100%;
+    font-size: 2vw;
   }
   
   .title-text {
