@@ -348,6 +348,11 @@ label {
     margin-right: 0;
   }
   
+  .contact-form-top, .contact-form-bot {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
   #footer {
     flex-direction: column;
   }
