@@ -11,10 +11,10 @@ html, body {
 header {
   display: flex;
   flex-direction: row;
-  height: 70px;
+  width: 100%;
+  height: 80px;
   background-color: white;
   align-items: flex-start;
-  width: 100%;
 }
 
 #header-img-div {
@@ -53,7 +53,7 @@ header {
   color: #E75F41;
 }
 
-.container {
+#container {
   display: flex;
   width: 75%;
   height: 1270px;
@@ -242,12 +242,12 @@ label {
 
 #footer {
    display: flex;
+   flex: 1;
    width: 100%;
    background-color: #141415;
    justify-content: center;
    align-items: center;
    text-align: center;
-   height: 180px;
 }
 
 #info-container {
@@ -283,3 +283,85 @@ label {
 #social :hover {
   color: #E75F41 !important;
 }
+
+@media only screen and (max-width: 1500px) {
+  
+  body {
+    align-items: center;
+    height: 200%;
+  }
+  
+  header {
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+  
+  #header-img-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  #header-img_1 {
+    display: none;
+  }
+  
+   #header-img_2 {
+    display: flex;
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 12.5px;
+  }
+  
+  #nav-menu {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin-bottom: 10px;
+    padding: 0px;
+  }
+  
+  .nav-text {
+    padding: 0px;
+    font-size: 2vw;
+  }
+  
+  #container {
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .steps {
+    width: 100%;
+  }
+  
+  .boxes {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  #form-container  {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  #footer {
+    flex-direction: column;
+  }
+  
+  #info-container {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    margin: 10px;
+  }
+  
+  .info {
+    padding: 35px;
+  }
+  
+}
+
