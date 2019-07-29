@@ -19,7 +19,8 @@
 <body>
   <header id="header" >
     <div id="header-img-div" class="header-content">
-      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/CW-Banner-01.jpg" id="header-img_1">
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/CW%20banner%2001-LEFT.jpg" class="header-img_1">
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/CW%20banner%2001-RIGHT.jpg" class="header-img_1">
       <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/CW%20logo%2001.jpg" id="header-img_2">
     </div>
     <div id="nav-menu" class="header-content">
@@ -30,33 +31,47 @@
     </div>
   </header>
   <div id="container">
-    <div class="steps">
+    <div id="steps-container" class="child-container">
       <div id="consultation" class="boxes">
-        <div id="consultation-text" class="box-text">
-          <div id="consultation-header" class="title-text">&#9312; Consultation.</div>
-          <div id="consultation-tag" class="tag-text">Have a product idea? Need something 3D printed? Fill out the form below to recieve your quote.</div>
+        <div id="consultation-text" class="text-box">
+          <div class="text-box-child">
+            <div id="consultation-header" class="box-title">Consultation.</div>
+            <div id="consultation-tag" class="tag-text">Fill out the project form and we'll contact you within one business day to discuss the requirements of your project and associated pricing.</div>
+          </div>
         </div>
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/z%20probe%20sketch%20with%20pen%2001.jpg" id="consultation-img" class="box-img">
+        <div class="img-container">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/iStock-876906802.jpg" id="consultation-img" class="box-img">
+        </div>
+        <div class="spacer"></div>
       </div>
 
       <div id="design" class="boxes">
-        <div id="design-text" class="box-text">
-          <div id="design-header" class="title-text">&#9313; Design it.</div>
-          <div id="design-tag" class="tag-text">Work with a 3D designer to create a digital version of your product. All digital files are owned by you.</div>
+        <div id="design-text" class="text-box">
+          <div class="text-box-child">
+            <div id="design-header" class="box-title">Design it.</div>
+            <div id="design-tag" class="tag-text">Work with a 3D designer to create a digital version of your product. All digital files are owned by you.</div>
+          </div>
         </div>
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/z%20probe%20cropped%20v27.jpg" id="design-img" class="box-img">
+        <div class="img-container">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/iStock-172793192.jpg" id="design-img" class="box-img">
+        </div>
+        <div class="spacer"></div>
       </div>
-        
+
       <div id="make" class="boxes">
-        <div id="make-text" class="box-text">
-          <div id="make-header" class="title-text">&#9314; Make it.</div>
-          <div id="make-tag" class="tag-text">Order your part. A quote for your project will be emailed to you within two business days.</div>
+        <div id="make-text" class="text-box">
+          <div class="text-box-child">
+            <div id="make-header" class="box-title">Make it.</div>
+            <div id="make-tag" class="tag-text">Whether you have a simple napkin sketch, 3D model, or a physical object, we can work with you to produce your part quickly and accurately.</div>
+          </div>
         </div>
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/z%20probe%20cropped%2002.jpg" id="make-img" class="box-img">
+        <div class="img-container">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/iStock-869465470.jpg" id="make-img" class="box-img">
+        </div>
       </div>  
     </div>
     
-    <div id="form-container"> 
+    <div id="form-container" class="child-container"> 
       <form id="contact-form">
         <div id="name" class="contact-form-top" >
           <label class="f-title">Name</label>
@@ -125,7 +140,7 @@
           </div>
         </div>
       </form>
-      <div class="alert">
+      <div id="alert">
         <div id="alert-text">Your message has been sent. We will contact you by email shortly.</div>  
       </div>
     </div>
