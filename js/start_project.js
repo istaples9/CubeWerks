@@ -1,12 +1,12 @@
 // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyAZTlNJt5o0RZ9KhQQgcZphgCLfBz1P4w0",
-    authDomain: "cubewerks-ec743.firebaseapp.com",
-    databaseURL: "https://cubewerks-ec743.firebaseio.com",
-    projectId: "cubewerks-ec743",
-    storageBucket: "cubewerks-ec743.appspot.com",
-    messagingSenderId: "89768636380"
-  };
+var config = {
+  apiKey: "AIzaSyAZTlNJt5o0RZ9KhQQgcZphgCLfBz1P4w0",
+  authDomain: "cubewerks-ec743.firebaseapp.com",
+  databaseURL: "https://cubewerks-ec743.firebaseio.com",
+  projectId: "cubewerks-ec743",
+  storageBucket: "cubewerks-ec743.appspot.com",
+  messagingSenderId: "89768636380"
+};
 
 
 //calls function to initialize firebase
@@ -153,11 +153,11 @@ function alertMsg() {
   document.querySelector('#contact-form').style.opacity = .2;
   
   //show submit message
-  document.querySelector('.alert').style.display = 'flex';
+  document.querySelector('#alert').style.display = 'flex';
   window.location.hash = 'alert-text';
   
   //hide submit message after 6 seconds
-  setTimeout(function(){ document.querySelector('.alert').style.display = 'none'; }, 6000);
+  setTimeout(function(){ document.querySelector('#alert').style.display = 'none'; }, 6000);
 }
 
 
@@ -175,3 +175,4 @@ function styleReset(element, color, text) {
   //resets button text
   element.innerHTML = text;
 }
+
