@@ -118,9 +118,8 @@ header {
 }
 
 #left-box {
-  flex: .67;
+  flex: .5;
   justify-content: center;
-
 }
 
 #left-text-box {
@@ -278,6 +277,10 @@ header {
     width: 100%;
   }
   
+  #left-box {
+    min-height: 160px;
+  }
+  
   #left-text-box {
     flex-direction: row;
     align-items: flex-end;
@@ -328,3 +331,5 @@ header {
   }
   
 }
+
+
