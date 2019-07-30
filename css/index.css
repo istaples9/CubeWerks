@@ -4,7 +4,7 @@ body {
   font-family: 'Yantramanav', sans-serif;
   margin: 0;
   background-color: #2e2e2e;
-  height: 900px;
+  height: 1000px;
 }
 
 header {
@@ -119,6 +119,8 @@ header {
 
 #left-box {
   flex: .67;
+  justify-content: center;
+
 }
 
 #left-text-box {
@@ -147,14 +149,14 @@ header {
   display: flex;
   justify-content: center;
   color: white;
-  font-size: 1.35vw;
+  font-size: 1vw;
   margin: .75vw;
 }
 
 #up-arrow, #down-arrow, #left-arrow, #right-arrow {
-  font-size: 4vw !important;
+  font-size: 3.5vw !important;
   color: #767676;
-  margin: 1.75vw;
+  margin: 1.5vw;
 }
 
 #left-arrow, #right-arrow {
@@ -162,11 +164,11 @@ header {
 }
 
 .left-button {
-  height: 4vw;
-  width: 14vw;
+  height: 3vw;
+  width: 10vw;
   background-color: #722d91;
   color: white;
-  font-size: 1.75vw;
+  font-size: 1.3vw;
   font-weight: bold;
   cursor: pointer;
 }
@@ -178,7 +180,7 @@ header {
 #footer {
    display: flex;
    flex: 1;
-   height: 400px;
+   height: auto;
    width: 100%;
    background-color: #141415;
    justify-content: center;
@@ -291,7 +293,8 @@ header {
   }
   
   .left-button {
-    width: 10;
+    width: 16vw;
+    height: 4vw;
     font-size: 2vw;
     margin-bottom: 18px;
   }
@@ -306,6 +309,7 @@ header {
   
   #left-arrow, #right-arrow {
   display: flex;
+  font-size: 4.5vw !important;
 }
   
   #footer {
@@ -324,5 +328,3 @@ header {
   }
   
 }
-
-
