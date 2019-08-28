@@ -5,7 +5,7 @@ body {
   font-family: 'Yantramanav', sans-serif;
   margin: 0;
   background-color: #2e2e2e;
-  height: 1250px;
+  height: 1300px;
 }
 
 header {
@@ -227,7 +227,7 @@ header {
   
   #container {
     margin-top: 10px;
-    height: 1800px;
+    height: 2300px;
   }
   
   .img-container {
@@ -247,6 +247,7 @@ header {
   }
   
   #footer {
+    margin-top: 20px;
     flex-direction: column;
   }
   
