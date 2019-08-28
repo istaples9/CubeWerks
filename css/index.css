@@ -4,7 +4,7 @@ body {
   font-family: 'Yantramanav', sans-serif;
   margin: 0;
   background-color: #2e2e2e;
-  height: 1100px;
+  height: 1200px;
 }
 
 header {
@@ -26,6 +26,7 @@ header {
 .header-img_1 {
   height: 100%;
   object-fit: contain;
+  z-index: 1000;
 }
 
 #header-img_2 {
