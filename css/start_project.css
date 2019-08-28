@@ -5,7 +5,7 @@ body {
   font-family: 'Yantramanav', sans-serif;
   margin: 0;
   background-color: #2e2e2e;
-  height: 1550px;
+  height: 1950px;
 }
 
 header {
@@ -53,7 +53,7 @@ header {
 #container {
   display: flex;
   width: 75%;
-  height: 1200px;
+  height: 1450px;
   margin: 20px;
 }
 
@@ -69,6 +69,7 @@ header {
 #steps-container {
   display: flex;
   width: 60%;
+  height: 100%;
 }
 
 .boxes {
@@ -289,7 +290,6 @@ label {
 #footer {
    display: flex;
    flex: 1;
-   min-height: 300px;
    width: 100%;
    background-color: #141415;
    justify-content: center;
@@ -335,7 +335,7 @@ label {
   
   body {
     align-items: center;
-    height: 3150px;
+    height: 3800px;
   }
   
   header {
@@ -377,7 +377,7 @@ label {
   
   #container {
     flex-direction: column;
-    height: 2300px;
+    height: 100%;
   }
   
   #steps-container {
@@ -389,6 +389,7 @@ label {
   }
   
   #form-container {
+    max-height: 1100px;
     width: 100%;
     margin-left: 0px;
     margin-top: 20px;
