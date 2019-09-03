@@ -101,7 +101,6 @@ header {
   color: white;
   font-size: 52px;
   font-weight: 900;
-  line-height: 80%;
 }
 
 .tag-container {
@@ -111,7 +110,7 @@ header {
 .box-tag {
   font-size: 26px;
   font-weight: 900;
-  line-height: 80%;
+  padding-bottom: 10px;
   text-transform: uppercase;
 }
 
