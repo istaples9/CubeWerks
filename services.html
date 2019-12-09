@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en" >
+<html>
   <head>
-    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="css/start_project.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Yantramanav:500,900" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+    <script  src="js/start_project.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135502580-1"></script>
     <script>
@@ -14,98 +15,166 @@
       gtag('config', 'UA-135502580-1');
     </script>
   </head>
-  <body>
-    <header id="header">
-      <div id="header-img-div" class="header-content">
-        <a href="index.html" class="header-img_1">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/CW%20banner%2001-LEFT.jpg" class="header-img_1">
-        </a>
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/CW%20banner%2001-RIGHT.jpg" class="header-img_1">
-        <a href="index.html">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/CW%20logo%2001.jpg" id="header-img_2">
-        </a>
-      </div>
-      <div id="nav-menu" class="header-content">
-        <a href="start_project.html" id="contact" class="nav-text" onclick="window.location.href='start_project.html'">START PROJECT</a>
-        <a href="https://cubewerks-shop.com/" id="contact" class="nav-text">SHOP</a>
-        <a href="index.html" id="contact" class="nav-text">HOME</a>
-        <!--<a href="#footer" id="contact" class="nav-text">CONTACT</a>-->
-      </div>
-    </header>
-    <div id="container">
-      <div id="top-container" class="img-container">
-        <div id="cad" class="boxes">
-          <img class="box-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/iStock-CAD-02.jpg">
-          <div id="cad-text-box" class="text-box">
-            <div class="text-box-child">
-              <div id="cad-title" class="box-title">3D Modeling</div>
-              <div class="tag-container">
-                <div id="cad-tag" class="box-tag">&#x2022; Hard Edged<br>&#x2022; Organic</div>
-                <div id="cad-sub_tag" class="tag-text">Our designers use different 3D modeling techniques based on your project; from free-form aesthetic objects, to functional mechanical prototypes. We also offer drafting services which include technical and patent drawings.</div>
-              </div>
-            </div> 
+<body>
+  <header id="header" >
+    <div id="header-img-div" class="header-content">
+      <a href="index.html" class="header-img_1">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/CW%20banner%2001-LEFT.jpg" class="header-img_1">
+      </a>
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/CW%20banner%2001-RIGHT.jpg" class="header-img_1">
+      <a href="index.html">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/CW%20logo%2001.jpg" id="header-img_2">
+      </a>
+    </div>
+    <div id="nav-menu" class="header-content">
+      <a href="https://cubewerks-shop.com/" id="contact" class="nav-text">SHOP</a>
+      <a href="services.html" id="contact" class="nav-text">SERVICES</a>
+      <a href="index.html" id="contact" class="nav-text">HOME</a>
+      <!--<a href="#footer" id="contact" class="nav-text">CONTACT</a>-->
+    </div>
+  </header>
+  <div id="container">
+    <div id="steps-container" class="child-container">
+      <div id="consultation" class="boxes">
+        <div id="consultation-text" class="text-box">
+          <div class="text-box-child">
+            <div id="consultation-header" class="box-title">Consultation.</div>
+            <div id="consultation-tag" class="tag-text">Fill out the project form and we'll contact you within two business days to discuss the requirements of your project and associated pricing.</div>
           </div>
         </div>
-        <div id="render" class="boxes">
-          <img class="box-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/iStock-render-02.jpg">
-          <div id="render-text_box" class="text-box">
-            <div class="text-box-child">
-              <div id="render-title" class="box-title">3D Rendering</div>
-              <div class="tag-container">
-                <div id="render-tag" class="box-tag">&#x2022; Product<br>&#x2022; Architectual</div>
-                <div id="render-sub_tag" class="tag-text">We use top of the line rendering software to produce realistic computer generated images of your 3D model. We render products, architectual environments, and even do animated product assemblies.</div>
-              </div>
-            </div>
-          </div>
+        <div class="img-container">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/iStock-876906802.jpg" id="consultation-img" class="box-img">
         </div>
+        <div class="spacer"></div>
       </div>
-      <div id="bottom-container" class="img-container">
-        <div id="scan" class="boxes">
-          <img class="box-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/iStock-804317116%20-01.jpg">
-          <div id="scan-text_box" class="text-box">
-            <div class="text-box-child">
-              <div id="scan-title" class="box-title">3D Scanning</div>
-              <div class="tag-container">
-                <div id="scan-tag" class="box-tag">&#x2022; Mesh Generation<br>&#x2022; Reverse Engineering</div>
-                <div id="scan-sub_tag" class="tag-text">Send us almost any object and our engineers can scan it, generate mesh files for 3D printing, reverse engineer for accurate 3D model recreation, and do part comparison and inspection for quality control.</div>
-              </div>
-            </div>
-          </div>
-        </div> 
-        <div id="print" class="boxes">
-          <img class="box-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/iStock-Resin%20Chess%20Piece-01.jpg">
-          <div id="print-text_box" class="text-box">
-            <div class="text-box-child">
-              <div id="print-title" class="box-title">3D Printing</div>
-              <div class="tag-container">
-                <div id="print-tag" class="box-tag">&#x2022; Functional<br>&#x2022; Aesthetic</div>
-                <div id="print-sub_tag" class="tag-text">We provide high quality, fine detail prints using multijet printing technology. We print with a variety of polymer plastics based on the requirements of your project, and offer part processing and finishing.</div>
-              </div>
-            </div>
+
+      <div id="design" class="boxes">
+        <div id="design-text" class="text-box">
+          <div class="text-box-child">
+            <div id="design-header" class="box-title">Design it.</div>
+            <div id="design-tag" class="tag-text">Work with a 3D designer to create a digital version of your product. After a 3D model of your part is created, we can produce technical drawings for patenting and manufacturing. All digital files are owned by you.</div>
           </div>
         </div>
+        <div class="img-container">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/iStock-172793192.jpg" id="design-img" class="box-img">
+        </div>
+        <div class="spacer"></div>
+      </div>
+
+      <div id="make" class="boxes">
+        <div id="make-text" class="text-box">
+          <div class="text-box-child">
+            <div id="make-header" class="box-title">Make it.</div>
+            <div id="make-tag" class="tag-text">Whether you have a simple napkin sketch, 3D model, or a physical object, we can work with you to produce your 3D printed part quickly and accurately.</div>
+          </div>
+        </div>
+        <div class="img-container">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2794713/iStock-869465470.jpg" id="make-img" class="box-img">
+        </div>
+      </div>  
+    </div>
+    
+    <div id="form-container" class="child-container"> 
+      <form id="contact-form">
+        <div id="name" class="contact-form-top" >
+          <label class="f-title">Name</label>
+          <input type="text" class="f-input" id="f-name" placeholder="Enter name..." required>
+        </div>
+        <div id="email" class="contact-form-top">
+          <label class="f-title">Email</label>
+          <input type="text" class="f-input" id="f-email" placeholder="Enter email..." required>
+        </div>
+        <div id="phone" class="contact-form-top">
+          <label class="f-title">Number</label>
+          <input type="text" class="f-input" id="f-phone" placeholder="Enter phone number...">
+        </div>
+        <div id="company" class="contact-form-top">
+          <label class="f-title">Company</label>
+          <input type="text" class="f-input" id="f-company" placeholder="Enter company name...">
+        </div>
+        <div id="project-name" class="contact-form-top">
+          <label class="f-title">Project Name</label>
+          <input type="text" class="f-input" id="f-project" placeholder="Name your project..." required>
+        </div>
+        <div id="design-services-container" class="contact-form-top">
+          <div class="services-title-container">
+            <label class="f-title">Design Services</label>
+          </div>
+            <div class="checkbox-container">
+              <label class="check_label" for"f-cad">3D Modeling
+                <input type="checkbox" id="f-cad" class="checkbox">
+              </label>
+              <label class="check_label" for"f-drawing">Techincal Drawing
+                <input type="checkbox" id="f-drawing" class="checkbox">
+              </label>
+              <label class="check_label" for"f-rendering">3D Rendering
+                <input type="checkbox" id="f-rendering" class="checkbox">
+              </label>
+            </div>
+        </div>
+        <div id="production-services-container" class="contact-form-top">
+          <div class="services-title-container">
+            <label class="f-title">Production Services</label>
+          </div>
+            <div class="checkbox-container">
+              <label class="check_label" for"f-scanning">3D Scanning
+                <input type="checkbox" id="f-scanning" class="checkbox">
+              </label>
+              <label class="check_label" for"f-reverse">Reverse Engineering
+                <input type="checkbox" id="f-reverse" class="checkbox">
+              </label>
+              <label class="check_label" for"f-3dp">3D Printing
+                <input type="checkbox" id="f-3dp" class="checkbox">
+              </label>
+              <!--<label class="check_label" for"f-laser">Laser Cutting
+                <input type="checkbox" id="f-laser" class="checkbox">
+              </label>-->
+            </div>
+        </div>
+        <div id="details" class="contact-form-top">
+          <label class="f-title">Project Details</label>
+          <textarea id="f-details" class="f-input" placeholder="Tell us about your project.."></textarea>
+        </div>
+        <div id="buttons">
+          <div id="upload" class="contact-form-bot">
+            <input type="file" id="file-upload" class="input-file" multiple>
+              <label for="file-upload" id="upload-label" class="input-btn">Upload files</label>
+            <div class="file-info">0 files selected</div>
+          </div>
+          <div class="contact-form-bot">
+            <a id="submit-anchor" href="#alert-message">
+              <button id="fsubmit" type="submit" class="input-file"></button>
+                <label for="fsubmit" id="submit-label" class="input-btn">Submit</label>
+            </a>
+          </div>
+        </div>
+      </form>
+      <div id="alert">
+        <div id="alert-text">Your message has been sent. We will contact you by email shortly.</div>  
       </div>
     </div>
-    <div id="footer">
-        <div id="info-container">
-          <div id="map" class="info">
-            <i style="font-size:24px" class="fa" name="map-icon">&#xf041;</i>
-            <label for="map_icon" class="footer-text">260 Clinton Street, Springfield, VT</label>
-          </div>
-          <div id="email" class="info">
-            <i style="font-size:24px" class="fa" name="email-icon">&#xf0e0;</i>
-            <label for="email-icon" class="footer-text">support@cubewerks.com</label>
-          </div>
-          <div id="phone" class="info">
-            <i style="font-size:24px" class="fa" name="phone-icon">&#xf095;</i>
-            <label for="phone-icon" class="footer-text">(802) 234-1253</label>
-          </div>
-          <div id="social" class="info">
-            <a href="https://twitter.com/CubeWerks"><i style="font-size:24px" class="fa" name="twitter">&#xf099;</i></a>
-            <a href="https://www.facebook.com/ThePrototypeWorkshop/?view_public_for=2664090020284775"><i style="font-size:24px" class="fa" name="facebook">&#xf09a;</i></a>
-            <!--<a href="https://www.youtube.com/channel/UCDgBspNP9-4EC10cl_LmwYg?view_as=subscriber"><i style="font-size:24px" class="fa" name="youtube">&#xf16a;</i></a>-->
-          </div>
-        </div>
+  </div>
+  <div id="footer">
+    <div id="info-container">
+      <div id="map" class="info">
+        <i style="font-size:24px" class="fa" name="map-icon">&#xf041;</i>
+        <label for="map_icon" class="footer-text">260 Clinton Street, Springfield, VT</label>
       </div>
-  </body>
+      <div id="email" class="info">
+        <i style="font-size:24px" class="fa" name="email-icon">&#xf0e0;</i>
+        <label for="email-icon" class="footer-text">support@cubewerks.com</label>
+      </div>
+      <div id="phone" class="info">
+        <i style="font-size:24px" class="fa" name="phone-icon">&#xf095;</i>
+        <label for="phone-icon" class="footer-text">(802) 234-1253</label>
+      </div>
+      <div id="social" class="info">
+        <a href="https://twitter.com/CubeWerks"><i style="font-size:24px" class="fa" name="twitter">&#xf099;</i></a>
+        <a href="https://www.facebook.com/ThePrototypeWorkshop/?view_public_for=2664090020284775"><i style="font-size:24px" class="fa" name="facebook">&#xf09a;</i></a>
+          <!--<a href="https://www.youtube.com/channel/UCDgBspNP9-4EC10cl_LmwYg?view_as=subscriber"><i style="font-size:24px" class="fa" name="youtube">&#xf16a;</i></a>-->
+      </div>
+    </div>
+  </div>
+</body>
 </html>
+
