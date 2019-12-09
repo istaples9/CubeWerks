@@ -117,10 +117,10 @@ function saveMessage(newMessageRef, download_urls){
   var project = getInputVal('f-project')
   var cad = getCheckedVal('f-cad')
   var rendering = getCheckedVal('f-rendering')
-  //var tech_drawing = getCheckedVal('f-drawing')
+  var tech_drawing = getCheckedVal('f-drawing')
   var scanning = getCheckedVal('f-scanning')
+  var reverse_engineering = getCheckedVal('f-reverse')
   var additive_printing = getCheckedVal('f-3dp')
-  //var laser_cutting = getCheckedVal('f-laser')
   var details = getInputVal('f-details')
   
   newMessageRef.set({
@@ -131,10 +131,10 @@ function saveMessage(newMessageRef, download_urls){
     project: project,
     CAD: cad,
     rendering: rendering,
-    //technical_drawing: tech_drawing,
+    technical_drawing: tech_drawing,
     scanning: scanning,
+    reverse_engineering: reverse_engineering,
     additive_printing: additive_printing,
-    //laser_cutting: laser_cutting,
     message: details,
     url: download_urls
   })
@@ -175,4 +175,3 @@ function styleReset(element, color, text) {
   //resets button text
   element.innerHTML = text;
 }
-
