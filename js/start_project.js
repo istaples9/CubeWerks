@@ -116,8 +116,8 @@ function saveMessage(newMessageRef, download_urls){
   var company = getInputVal('f-company')
   var project = getInputVal('f-project')
   var cad = getCheckedVal('f-cad')
-  var rendering = getCheckedVal('f-rendering')
   var tech_drawing = getCheckedVal('f-drawing')
+  var rendering = getCheckedVal('f-rendering')
   var scanning = getCheckedVal('f-scanning')
   var reverse_engineering = getCheckedVal('f-reverse')
   var additive_printing = getCheckedVal('f-3dp')
@@ -130,8 +130,8 @@ function saveMessage(newMessageRef, download_urls){
     company: company,
     project: project,
     CAD: cad,
-    rendering: rendering,
     technical_drawing: tech_drawing,
+    rendering: rendering,
     scanning: scanning,
     reverse_engineering: reverse_engineering,
     additive_printing: additive_printing,
@@ -175,3 +175,4 @@ function styleReset(element, color, text) {
   //resets button text
   element.innerHTML = text;
 }
+
