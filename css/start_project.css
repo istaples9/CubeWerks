@@ -50,6 +50,11 @@ header {
   font-weight: bold;
   padding-left: 75px;
 }
+
+.nav-text:hover {
+  color: #E75F41;
+}
+
 #container {
   display: flex;
   width: 75%;
